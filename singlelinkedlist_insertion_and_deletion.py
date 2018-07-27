@@ -1,3 +1,7 @@
+#praveen kumar
+#Indian institute of information technology kalyani
+
+
 class Node:
         def __init__(self,data):
                 self.data=data
@@ -35,7 +39,7 @@ class LinkedList:
                         self.head=self.head.nextnode
 
 
-        def remove_data(self,data1):
+        def remove_data(self,data1):   #removing a given data 
                 ptr=self.head
                 if self.head is None:
                         return
