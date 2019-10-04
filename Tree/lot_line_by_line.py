@@ -6,7 +6,6 @@ class Node:
 
 
 #k=height(root)
-l=[0]*4
 def height(root):
 	if root is None:
 		return 0
@@ -24,11 +23,11 @@ def height(root):
 def givenlevel(root,level):
 	if root is None:
 		return None
-	
+	temp=level
 	if level==1:
-		#l[j].extend(root.val)
-		print(root.val,end=' ')
-		print('\n',end=' ')
+		l[temp].extend(root.val)
+		#print(root.val,end=' ')
+	
 		
 
 	elif level>1:
@@ -41,12 +40,16 @@ def printlevelorder(root):
 		
 		givenlevel(root,i)
 
-root = Node(1); 
-root.left = Node(2); 
-root.right = Node(3); 
-root.left.left = Node(4); 
-root.left.right = Node(5); 
-root.right.right = Node(6); 
-  
-printlevelorder(root)
-#print(l)
+
+if __name__=='__main__':
+	root = Node(1); 
+	root.left = Node(2); 
+	root.right = Node(3); 
+	root.left.left = Node(4); 
+	root.left.right = Node(5); 
+	root.right.right = Node(6); 
+  	h=height(root)
+ #  	l=[[] for _ in range(h)]
+	printlevelorder(root)
+	
+	line_by_line()
